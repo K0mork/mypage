@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マイページ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#basic-info">基本情報</a></li>
+                <li><a href="#research">研究内容</a></li>
+                <li><a href="#achievements">研究実績</a></li>
+                <li><a href="#skills">スキル</a></li>
+                <li><a href="#pr">自己PR</a></li>
+                <li><a href="#links">外部リンク</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <!-- ここにプロフィール写真やヒーローイメージを配置 -->
+            <!-- 例: <img src="path/to/your/photo.jpg" alt="プロフィール写真"> -->
+            <h1>Kouki KOMORI</h1>
+            <p>Portfolio for job hunting</p>
+        </section>
+
+        <section id="basic-info">
+            <h2><i class="fa-solid fa-id-card"></i> 基本情報</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <div class="info-content">
+                        <h3>氏名</h3>
+                        <p>小森 紅輝<br>こもり こうき</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <div class="info-content">
+                        <h3>所属</h3>
+                        <p>東海大学大学院 工学研究科<br>電気電子工学専攻 修士1年</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="info-content">
+                        <h3>所在地</h3>
+                        <p>〒259-1292<br>神奈川県平塚市北金目4-1-1</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2><i class="fa-solid fa-flask"></i> 研究内容</h2>
+            <p>テーマ: 従来手法より簡易に計測可能な視線計測技術</p>
+            <p>従来の視線計測技術は，計測前にユーザが事前の準備（キャリブレーション）を多く行う必要があり，その負担が問題視されていました．
+                そこで，ユーザがディスプレイ上の1点を注視するのみで計測可能な新たな視線計測技術を提案します．
+            </p>
+            <p>Computer Vision, Image Processing, eye-tracking</p>
+        </section>
+
+        <section id="achievements">
+            <h2><i class="fa-solid fa-award"></i> 研究実績</h2>
+            
+            <div class="achievement-category">
+                <h3><i class="fa-solid fa-globe"></i> 査読付き国際会議</h3>
+                <ul>
+                    <li><i class="fa-solid fa-trophy"></i> <a href="https://etra.acm.org/2025/" target="_blank" rel="noopener noreferrer">ACM ETRA 2025</a> : 採択，発表予定</li>
+                    <!-- 他の国際会議実績もここに追加 -->
+                </ul>
+            </div>
+
+            <div class="achievement-category">
+                <h3><i class="fa-solid fa-person-chalkboard"></i> 国内会議</h3>
+                <ul>
+                    <li><i class="fa-solid fa-robot"></i> <a href="https://robomech.org/2025/" target="_blank" rel="noopener noreferrer">ROBOMECH 2025</a> : ポスター発表予定，1日目，1A2-T06</li>
+                    <!-- 他の国内会議実績もここに追加 -->
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2><i class="fa-solid fa-laptop-code"></i> スキル</h2>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-file-code"></i>
+                    <div class="skill-content">
+                        <span class="skill-name">C++</span>
+                        <span class="skill-desc">研究で主に使用．リアルタイム画像処理システム．</span>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-code"></i>
+                    <div class="skill-content">
+                        <span class="skill-name">Python</span>
+                        <span class="skill-desc">研究の補助のほか，webスクレイピングやbot作成など．</span>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-image"></i>
+                    <div class="skill-content">
+                        <span class="skill-name">OpenCV</span>
+                        <span class="skill-desc">視線推定アルゴリズム実装，三次元幾何の計算．</span>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-code-branch"></i>
+                    <div class="skill-content">
+                        <span class="skill-name">Git</span>
+                        <span class="skill-desc">コードの管理のほか，GitHub Pagesを用いたホスティング．</span>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-brands fa-docker"></i>
+                    <div class="skill-content">
+                        <span class="skill-name">Docker</span>
+                        <span class="skill-desc">開発環境構築．</span>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-terminal"></i>
+                    <div class="skill-content">
+                        <span class="skill-name">Linux</span>
+                        <span class="skill-desc">Ubuntu環境での開発，自宅でのサーバ構築など．</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="pr">
+            <h2><i class="fa-solid fa-comment"></i> 自己PR</h2>
+            <p>　私の強みは目標達成に向けた粘り強さです．学部3年の夏から研究室に所属し，視線追跡の研究に平日は毎日取り組みました．
+                研究を進めていくにあたって，幾何モデルが現実に即さないという問題に直面しましたが，独自の仮説を導入することでこの問題を解決しました．
+                その結果，2024年度末に査読付き国際会議（ETRA 2025）に論文が採択されました．
+                また，国際的に活躍できるエンジニアを目指して語学力向上にも努めており，TOEICでは745点を取得しています．
+                さらに，専攻分野に限らず新しいテクノロジーへの興味も高く，常に学び続ける姿勢を持っています．
+            </p>
+        </section>
+
+        <section id="links">
+            <h2><i class="fa-solid fa-link"></i> 外部リンク</h2>
+            <ul>
+                <li><a href="https://github.com/K0mork" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kouki KOMORI</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

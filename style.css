@@ -1,0 +1,440 @@
+/* モダンな基本スタイル */
+:root {
+    --background-color: #ffffff;
+    --text-color: #1d1d1f;
+    --secondary-text-color: #6e6e73;
+    --link-color: #0071e3;
+    --border-color: #d2d2d7;
+    --header-background: rgba(255, 255, 255, 0.8); /* 半透明のヘッダー */
+    --section-background: #f5f5f7;
+    --footer-background: #f5f5f7;
+}
+
+/* ダークモード用カラーパレット */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1d1d1f;
+        --text-color: #f5f5f7;
+        --secondary-text-color: #a1a1a6;
+        --link-color: #2997ff;
+        --border-color: #424245;
+        --header-background: rgba(29, 29, 31, 0.8);
+        --section-background: #2c2c2e;
+        --footer-background: #2c2c2e;
+    }
+}
+
+html {
+    scroll-behavior: smooth; /* スムーズスクロール */
+}
+
+body {
+    font-family: "Hiragino Maru Gothic ProN", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 可愛い丸ゴシックフォント */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased; /* フォントを滑らかに */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    background-color: var(--header-background);
+    backdrop-filter: blur(10px); /* 背景をぼかす */
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s ease; /* 背景色の変化を滑らかに */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0 2rem; /* 左右に余白を追加 */
+    margin: 0 auto; /* 中央揃え */
+    max-width: 960px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block; /* inlineから変更 */
+    margin: 0 1.5rem; /* 余白調整 */
+}
+
+nav ul li a {
+    color: var(--text-color); /* テキスト色変更 */
+    text-decoration: none;
+    font-weight: 500; /* 少し細めに */
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--link-color); /* ホバー時の色変更 */
+    text-decoration: none; /* 下線は不要に */
+}
+
+main {
+    max-width: 1080px; /* 最大幅を少し広げる */
+    margin: 3rem auto; /* 上下のマージンを少し詰める */
+    padding: 0 2rem; /* 左右のパディング */
+}
+
+section {
+    padding: 3rem 2rem; /* 上下左右のパディング */
+    margin-bottom: 3rem; /* セクション下のマージン */
+    /* border-bottom: 1px solid var(--border-color); 区切り線 */
+    background-color: var(--section-background); /* 背景色を適用 */
+    margin-left: -2rem; /* mainのパディングを打ち消す */
+    margin-right: -2rem;
+    border-radius: 12px; /* 角を丸める */
+    overflow: hidden; /* 角丸を適用するために必要 */
+}
+
+section:last-of-type { /* 最後のセクションの下線は不要 */
+    border-bottom: none;
+    margin-bottom: 0; /* 最後のセクション下のマージンも不要 */
+}
+
+/* ヒーローセクションは背景色なし */
+#hero {
+    background-color: transparent; /* ヒーローは背景色なし */
+    border-bottom: none;
+    margin-left: 0; /* マージンリセット */
+    margin-right: 0;
+    padding: 4rem 2rem; /* ヒーローの左右パディングもmainに合わせる */
+}
+
+/* ヒーローセクション */
+
+#hero {
+    text-align: center;
+    /* padding: 6rem 0; */ /* 上記で調整済み */
+    /* background-color: var(--section-background); */
+    /* background-image: url('path/to/hero-image.jpg'); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    margin-bottom: 3rem; /* 下のマージン調整 */
+}
+
+#hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: var(--secondary-text-color);
+    max-width: 600px; /* 長すぎる場合に改行 */
+    margin: 0 auto; /* 中央揃え */
+}
+
+h2 {
+    font-size: 2.5rem; /* 見出しを大きく */
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 1.5rem; /* 見出し下のマージンを少し詰める */
+    text-align: center; /* 中央揃え */
+    /* border-bottom: none; */
+    display: flex; /* アイコンとテキストを横並びにする */
+    align-items: center; /* 垂直方向中央揃え */
+    justify-content: center; /* 水平方向中央揃え */
+}
+
+h2 i { /* 見出し内のアイコン */
+    margin-right: 1rem; /* アイコンとテキストの間隔 */
+    color: var(--link-color); /* アイコンの色 */
+    font-size: 2rem; /* アイコンサイズ調整 */
+}
+
+/* 研究実績カテゴリ */
+.achievement-category {
+    margin-bottom: 2rem;
+}
+
+.achievement-category h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.achievement-category h3 i {
+    margin-right: 0.8rem;
+    color: var(--link-color);
+    font-size: 1.5rem;
+}
+
+.achievement-category ul {
+    padding-left: 2rem;
+}
+
+p, li {
+    font-size: 1.1rem;
+    color: var(--secondary-text-color);
+}
+
+/* 研究セクション専用スタイル */
+#research p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+#research p:nth-of-type(1) { /* テーマ */
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 1.2rem;
+}
+
+#research p:nth-of-type(2) { /* 概要 */
+    font-size: 1.2rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--link-color);
+    margin-bottom: 2rem;
+}
+
+#research p:nth-of-type(3) { /* Keywords */
+    font-size: 1.1rem;
+    background-color: rgba(41, 151, 255, 0.1); /* --link-colorのRGBA値を使用 */
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+#research p:nth-of-type(3)::before {
+    content: "Keywords: ";
+    font-weight: 600;
+    color: var(--link-color);
+    margin-right: 0.5rem;
+}
+
+ul {
+    padding-left: 0; /* デフォルトのパディング削除 */
+    list-style: none; /* リストマーカー削除 */
+}
+
+/* 基本情報グリッドスタイル */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.info-card {
+    background: var(--background-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+}
+
+.info-card i {
+    font-size: 2rem;
+    color: var(--link-color);
+    min-width: 40px;
+    text-align: center;
+}
+
+.info-content h3 {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.1rem;
+    color: var(--secondary-text-color);
+}
+
+.info-content p {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* スキル項目スタイル */
+#skills li {
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: flex-start; /* 上部揃えに変更 */
+    line-height: 1.7;
+    background-color: var(--background-color);
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+/* スキル名と説明のテキスト階層 */
+.skill-name {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+/* アイコン位置調整 */
+#skills li i {
+    margin-top: 0.3rem; /* 微調整 */
+    margin-right: 1rem;
+    padding-right: 0.5rem;
+}
+
+.skill-desc {
+    color: var(--secondary-text-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* アイコンとテキストコンテナ */
+.skill-content {
+    flex-grow: 1;
+}
+
+/* スキルグリッドレイアウト */
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+#skills li:hover {
+    transform: translateY(-2px);
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+    #skills ul {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    
+    #skills li {
+        margin-bottom: 1rem;
+    }
+    
+    .skill-name {
+        font-size: 1rem;
+    }
+    
+    .skill-desc {
+        font-size: 0.9rem;
+    }
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8; /* ホバー時に少し透明に */
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    background-color: var(--footer-background);
+    color: var(--secondary-text-color);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 1100px) { /* max-width調整 */
+    main {
+        max-width: 90%; /* 画面幅に応じて調整 */
+    }
+    section { /* 背景色がある場合の左右マージン調整 */
+        margin-left: -2rem;
+        margin-right: -2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    #hero { /* ヒーローのマージンリセット */
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        padding: 0 1rem;
+    }
+
+    nav ul li {
+        margin: 0 0.8rem; /* スマートフォンでのメニュー間隔調整 */
+    }
+
+    main {
+        margin: 2rem auto;
+        padding: 0 1rem;
+        max-width: 100%; /* スマホでは最大幅制限解除 */
+    }
+
+    section {
+        padding: 2rem 1rem; /* スマホでのセクションパディング調整 (左右も) */
+        margin-bottom: 2rem; /* スマホでのセクションマージン調整 */
+        margin-left: -1rem; /* スマホでの背景マージン調整 */
+        margin-right: -1rem;
+        border-radius: 8px; /* スマホでは少し小さめの角丸 */
+        overflow: hidden;
+    }
+    #hero {
+        padding: 3rem 1rem; /* スマホでのヒーローパディング */
+        margin-left: 0; /* スマホでのヒーローマージンリセット */
+        margin-right: 0;
+    }
+
+    p, li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        display: block; /* さらに小さい画面では縦並び */
+        margin: 0.8rem 0;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* 自己PRの文字色設定 */
+#pr p {
+    color: #000000; /* ライトモード時の黒色 */
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+    #pr p {
+        color: #FFFFFF; /* ダークモード時の白色 */
+    }
+}
