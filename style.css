@@ -438,3 +438,11 @@ footer {
         color: #FFFFFF; /* ダークモード時の白色 */
     }
 }
+
+.at-mark {
+    background-color: #999;
+    padding: 0 3px;
+    border-radius: 3px;
+    font-style: italic;
+    cursor: help;
+}
