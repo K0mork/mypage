@@ -446,3 +446,125 @@ footer {
     font-style: italic;
     cursor: help;
 }
+
+/* プルダウン(details/summary)スタイル */
+details {
+    margin: 0.5rem 0;
+}
+
+summary {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--link-color);
+    font-weight: 500;
+    transition: color 0.2s ease;
+    list-style: none; /* デフォルトの矢印を非表示 */
+}
+
+summary::-webkit-details-marker {
+    display: none; /* Chrome用のデフォルト矢印を非表示 */
+}
+
+summary:hover {
+    color: var(--text-color);
+}
+
+summary:focus {
+    outline: none;
+}
+
+/* プルダウンアイコン */
+summary::after {
+    content: "▼";
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+/* ドロップダウンコンテンツ */
+.dropdown-content {
+    padding: 1rem;
+    margin-top: 0.5rem;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content p {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.dropdown-content a {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+.conference-info {
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
+}
+
+.conference-description {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: rgba(41, 151, 255, 0.05);
+    border-left: 4px solid var(--link-color);
+    border-radius: 0 8px 8px 0;
+}
+
+.conference-description h4 {
+    color: var(--link-color);
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.paper-summary {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+}
+
+.paper-summary h4 {
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.paper-title {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+blockquote {
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-left: 4px solid var(--secondary-text-color);
+    border-radius: 0 4px 4px 0;
+    font-style: italic;
+    color: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    .conference-description {
+        background-color: rgba(41, 151, 255, 0.1);
+    }
+    .paper-summary {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+    blockquote {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+}
