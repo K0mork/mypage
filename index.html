@@ -3,196 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>マイページ</title>
+    <meta name="description" content="視線計測技術を研究する小森紅輝のポートフォリオ。研究内容、発表実績、技術スキルを紹介します。">
+    <meta name="theme-color" content="#e8eef5">
+    <title>Kouki KOMORI | Research Portfolio</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-    <header>
-        <div class="top-progress" aria-hidden="true"><span></span></div>
-        <nav>
-            <ul>
-                <li><a href="#basic-info">基本情報</a></li>
-                <li><a href="#research">研究内容</a></li>
-                <li><a href="#achievements">研究実績</a></li>
-                <li><a href="#skills">スキル</a></li>
-                <li><a href="#pr">自己PR</a></li>
-                <li><a href="#links">外部リンク</a></li>
-            </ul>
-            <button id="theme-toggle" class="icon-button" aria-label="テーマ切替" title="テーマ切替">
-                <i class="fa-solid fa-sun"></i>
-            </button>
-        </nav>
+    <div class="top-progress" aria-hidden="true"><span></span></div>
+
+    <header class="mobile-header">
+        <a class="mobile-brand" href="#top" aria-label="ページの先頭へ">
+            <span>KK</span>
+            <strong>Kouki KOMORI</strong>
+        </a>
+        <button id="menu-toggle" class="neu-button menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
     </header>
 
-    <main>
-        <section id="hero">
-            <!-- ここにプロフィール写真やヒーローイメージを配置 -->
-            <!-- 例: <img src="path/to/your/photo.jpg" alt="プロフィール写真"> -->
-            <div class="hero-inner">
-                <div class="hero-blob" aria-hidden="true"></div>
-                <div class="hero-profile" aria-hidden="true">
-                    <i class="fa-solid fa-user"></i>
+    <div class="page-shell" id="top">
+        <aside class="sidebar" aria-label="プロフィールとナビゲーション">
+            <div class="profile-card">
+                <div class="profile-mark" aria-hidden="true">
+                    <span>KK</span>
                 </div>
-                <h1>Kouki KOMORI</h1>
-                <p>Portfolio for job hunting</p>
-                <div class="hero-actions">
-                    <a href="#achievements" class="button primary"><i class="fa-solid fa-award"></i> 実績を見る</a>
-                    <a href="#links" class="button"><i class="fa-solid fa-link"></i> リンクへ</a>
-                </div>
+                <p class="eyebrow">RESEARCHER / ENGINEER</p>
+                <h1>Kouki<br>KOMORI</h1>
+                <p class="profile-role">視線計測を、もっとシンプルに。</p>
+                <div class="status-chip"><span aria-hidden="true"></span> Open to opportunities</div>
             </div>
-        </section>
 
-        <section id="basic-info">
-            <h2><i class="fa-solid fa-id-card"></i> 基本情報</h2>
-            <div class="info-grid">
-                <div class="info-card">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <div class="info-content">
-                        <h3>氏名</h3>
-                        <p>小森 紅輝<br>こもり こうき</p>
-                    </div>
-                </div>
-                <div class="info-card">
-                    <i class="fa-solid fa-building-columns"></i>
-                    <div class="info-content">
-                        <h3>所属</h3>
-                        <p>東海大学大学院 工学研究科<br>電気電子工学専攻 修士1年</p>
-                    </div>
-                </div>
-                <div class="info-card">
-                    <i class="fa-solid fa-envelope"></i>
-                    <div class="info-content">
-                        <h3>メールアドレス</h3>
-                        <p>kouki.j.hunting<span class="at-mark" title="@マークに置き換えてください">[at]</span>gmail.com</p>
-                    </div>
-                </div>
+            <nav id="site-nav" class="site-nav" aria-label="メインナビゲーション">
+                <a href="#about" class="active"><i class="fa-regular fa-user" aria-hidden="true"></i><span>About</span></a>
+                <a href="#research"><i class="fa-solid fa-eye" aria-hidden="true"></i><span>Research</span></a>
+                <a href="#achievements"><i class="fa-solid fa-trophy" aria-hidden="true"></i><span>Achievements</span></a>
+                <a href="#skills"><i class="fa-solid fa-code" aria-hidden="true"></i><span>Skills</span></a>
+                <a href="#strength"><i class="fa-regular fa-lightbulb" aria-hidden="true"></i><span>Strength</span></a>
+            </nav>
+
+            <div class="sidebar-actions">
+                <a class="neu-icon-button" href="https://github.com/K0mork" target="_blank" rel="noopener noreferrer" aria-label="GitHubを開く">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <button id="theme-toggle" class="neu-icon-button" type="button" aria-label="ダークテーマに切り替える" title="テーマ切替">
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                </button>
             </div>
-        </section>
+        </aside>
 
-        <section id="research">
-            <h2><i class="fa-solid fa-flask"></i> 研究内容</h2>
-            <p>テーマ: 従来手法より簡易に計測可能な視線計測技術</p>
-            <p>従来の視線計測技術は，計測前にユーザが事前の準備（キャリブレーション）を多く行う必要があり，その負担が問題視されていました．
-                そこで，ユーザがディスプレイ上の1点を注視するのみで計測可能な新たな視線計測技術を提案します．
-            </p>
-            <p>Computer Vision, Image Processing, eye-tracking</p>
-        </section>
+        <main>
+            <section id="about" class="hero reveal">
+                <div class="hero-copy">
+                    <p class="section-index">01 — ABOUT ME</p>
+                    <h2>人の負担を減らす<br><em>視線計測技術</em>を研究。</h2>
+                    <p class="hero-lead">東海大学大学院で、Computer Vision と幾何学を用いた視線推定に取り組んでいます。技術を深く追究し、研究成果を世界へ届けるエンジニアを目指しています。</p>
+                    <div class="hero-actions">
+                        <a class="neu-button primary" href="#research">研究を見る <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                        <a class="neu-button" href="https://github.com/K0mork" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="hero-visual" aria-label="プロフィール概要">
+                    <div class="orbit orbit-one" aria-hidden="true"></div>
+                    <div class="orbit orbit-two" aria-hidden="true"></div>
+                    <div class="eye-symbol" aria-hidden="true">
+                        <div class="eye-lens"><span></span></div>
+                    </div>
+                    <div class="floating-note note-top"><span>FIELD</span><strong>Eye Tracking</strong></div>
+                    <div class="floating-note note-bottom"><span>FOCUS</span><strong>One-point calibration</strong></div>
+                </div>
+            </section>
 
-        <section id="achievements">
-            <h2><i class="fa-solid fa-award"></i> 研究実績</h2>
-            
-            <div class="achievement-category">
-                <h3><i class="fa-solid fa-globe"></i> 査読付き国際会議</h3>
-                <ul>
-                    <li>
-                        <i class="fa-solid fa-trophy"></i>
+            <section class="info-strip reveal" aria-label="基本情報">
+                <div><span>NAME</span><strong>小森 紅輝</strong><small>こもり こうき</small></div>
+                <div><span>AFFILIATION</span><strong>東海大学大学院</strong><small>工学研究科 電気電子工学専攻 修士1年</small></div>
+                <div><span>CONTACT</span><strong>kouki.j.hunting<span class="at-mark">[at]</span>gmail.com</strong><small>[at] を @ に置き換えてください</small></div>
+            </section>
+
+            <section id="research" class="content-section reveal">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-index">02 — RESEARCH</p>
+                        <h2>研究内容</h2>
+                    </div>
+                    <span class="heading-icon" aria-hidden="true"><i class="fa-solid fa-eye"></i></span>
+                </div>
+                <div class="research-grid">
+                    <article class="neu-card research-main">
+                        <span class="card-label">RESEARCH THEME</span>
+                        <h3>従来手法より簡易に計測可能な<br>視線計測技術</h3>
+                        <p>従来の視線計測は、計測前に多くのキャリブレーションを必要とし、ユーザの負担が課題でした。そこで、ディスプレイ上の<strong>1点を注視するだけ</strong>で計測を始められる新たな手法を提案しています。</p>
+                        <div class="keyword-list" aria-label="研究キーワード">
+                            <span>Computer Vision</span><span>Image Processing</span><span>Eye Tracking</span>
+                        </div>
+                    </article>
+                    <aside class="neu-card research-metric">
+                        <span class="card-label">CALIBRATION</span>
+                        <div class="metric-number"><span>4</span><i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i><strong>1</strong></div>
+                        <p>基準点を4点から1点へ</p>
+                        <div class="metric-track" aria-hidden="true"><span></span></div>
+                    </aside>
+                </div>
+            </section>
+
+            <section id="achievements" class="content-section reveal">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-index">03 — ACHIEVEMENTS</p>
+                        <h2>研究実績</h2>
+                    </div>
+                    <span class="heading-icon" aria-hidden="true"><i class="fa-solid fa-trophy"></i></span>
+                </div>
+                <div class="timeline">
+                    <article class="achievement-card featured">
+                        <div class="timeline-point" aria-hidden="true"></div>
+                        <div class="achievement-meta"><span>2025.05.28</span><span class="pill">INTERNATIONAL</span></div>
+                        <div class="achievement-title-row">
+                            <div>
+                                <p>ACM Symposium on Eye Tracking Research &amp; Applications</p>
+                                <h3><a href="https://etra.acm.org/2025/" target="_blank" rel="noopener noreferrer">ACM ETRA 2025 <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></h3>
+                            </div>
+                            <strong class="result-badge"><i class="fa-solid fa-check" aria-hidden="true"></i> Short Paper 採択</strong>
+                        </div>
                         <details>
-                            <summary><a href="https://etra.acm.org/2025/" target="_blank" rel="noopener noreferrer">ACM ETRA 2025</a> : short paper採択</summary>
-                            <div class="conference-info">
-                                <div class="conference-description">
+                            <summary>論文と会議の詳細を見る</summary>
+                            <div class="detail-panel">
+                                <div>
                                     <h4>会議について</h4>
-                                    <p>ACM Symposium on Eye Tracking Research & Applications (ETRA) は，視線計測技術に関するトップカンファレンスです．分野を絞っている分，会議の規模は小さいですが，視線計測のトップ研究者が集まるレベルの高い国際会議です．<br>ETRA 2025は日本開催でしたが，Full PaperとShort Paperを合わせても日本人で採択されているのは私のみです．</p>
+                                    <p>ETRAは視線計測技術に関するトップカンファレンスです。ETRA 2025のFull PaperとShort Paperを合わせ、日本人で採択されたのは私のみでした。</p>
                                 </div>
-                                <div class="paper-summary">
-                                    <h4>論文概要</h4>
-                                    <p class="paper-title">採択論文: "Homography normalization enhanced to enable one-point user calibration for gaze estimation"</p>
-                                    <p>発表: <a href="https://programs.sigchi.org/etra/2025/program/content/197424" target="_blank" rel="noopener noreferrer">ポスター</a>, 2025年5月28日</p>
-                                    <blockquote>
-                                        代表的な視線計測にhomography normalization法がありますが，計測開始前にユーザがディスプレイ上の基準点を4点見る必要があり，ユーザの負担が課題となっていました．そこで，幾何的なアイモデルをhomography normalization法に導入することで，正確な眼球姿勢を推定し，キャリブレーションの点数を1点まで減らした手法を提案しました．
-                                    </blockquote>
+                                <div>
+                                    <h4>採択論文</h4>
+                                    <p class="paper-title">“Homography normalization enhanced to enable one-point user calibration for gaze estimation”</p>
+                                    <p>幾何的なアイモデルを導入し、正確な眼球姿勢を推定することで、キャリブレーションを1点まで削減しました。<a href="https://programs.sigchi.org/etra/2025/program/content/197424" target="_blank" rel="noopener noreferrer">発表情報</a></p>
                                 </div>
                             </div>
                         </details>
-                    </li>
-                    <!-- 他の国際会議実績もここに追加 -->
-                </ul>
-            </div>
+                    </article>
 
-            <div class="achievement-category">
-                <h3><i class="fa-solid fa-person-chalkboard"></i> 国内会議</h3>
-                <ul>
-                    <li><i class="fa-solid fa-robot"></i> <a href="https://robomech.org/2025/" target="_blank" rel="noopener noreferrer">ROBOMECH 2025</a> : ポスター発表，2025年6月5日，1A2-T06</li>
-                    <li><i class="fa-solid fa-robot"></i> <a href="https://sice-si.org/si2025/" target="_blank" rel="noopener noreferrer">SI 2025</a> : <strong class="award-badge"><i class="fa-solid fa-trophy" aria-hidden="true"></i> 優秀講演賞 受賞</strong>，ポスター発表，2025年12月10日，1D2-11</li>
-                    <!-- 他の国内会議実績もここに追加 -->
-                </ul>
-            </div>
-        </section>
+                    <article class="achievement-card">
+                        <div class="timeline-point" aria-hidden="true"></div>
+                        <div class="achievement-meta"><span>2025.06.05</span><span class="pill">DOMESTIC</span></div>
+                        <h3><a href="https://robomech.org/2025/" target="_blank" rel="noopener noreferrer">ROBOMECH 2025 <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></h3>
+                        <p>ポスター発表 / 1A2-T06</p>
+                    </article>
 
-        <section id="skills">
-            <h2><i class="fa-solid fa-laptop-code"></i> スキル</h2>
-            <ul>
-                <li>
-                    <i class="fa-solid fa-file-code"></i>
-                    <div class="skill-content">
-                        <span class="skill-name">C++</span>
-                        <span class="skill-desc">研究で主に使用．リアルタイム画像処理システム．</span>
-                    </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-code"></i>
-                    <div class="skill-content">
-                        <span class="skill-name">Python</span>
-                        <span class="skill-desc">研究の補助のほか，webスクレイピングやbot作成など．</span>
-                    </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-image"></i>
-                    <div class="skill-content">
-                        <span class="skill-name">OpenCV</span>
-                        <span class="skill-desc">視線推定アルゴリズム実装，三次元幾何の計算．</span>
-                    </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-code-branch"></i>
-                    <div class="skill-content">
-                        <span class="skill-name">Git</span>
-                        <span class="skill-desc">コードの管理のほか，GitHub Pagesを用いたホスティング．</span>
-                    </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-terminal"></i>
-                    <div class="skill-content">
-                        <span class="skill-name">Linux</span>
-                        <span class="skill-desc">Ubuntu環境での開発，自宅でのサーバ構築など．</span>
-                    </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-language"></i>
-                    <div class="skill-content">
-                        <span class="skill-name">TOEIC</span>
-                        <span class="skill-desc">2025年06月: 855点<br>2023年10月: 745点</span>
-                    </div>
-                </li>
-            </ul>
-        </section>
+                    <article class="achievement-card award">
+                        <div class="timeline-point" aria-hidden="true"></div>
+                        <div class="achievement-meta"><span>2025.12.10</span><span class="pill">DOMESTIC</span></div>
+                        <div class="achievement-title-row">
+                            <div>
+                                <h3><a href="https://sice-si.org/si2025/" target="_blank" rel="noopener noreferrer">SI 2025 <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></h3>
+                                <p>ポスター発表 / 1D2-11</p>
+                            </div>
+                            <strong class="result-badge gold"><i class="fa-solid fa-trophy" aria-hidden="true"></i> 優秀講演賞</strong>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-        <section id="pr">
-            <h2><i class="fa-solid fa-comment"></i> 自己PR</h2>
-            <p>　私の強みは目標達成に向けた粘り強さです．学部3年の夏から研究室に所属し，視線追跡の研究に平日は毎日取り組んでいます．
-                研究を進めていくにあたって，幾何モデルが現実に即さないという問題に直面しましたが，独自の仮説を導入することでこの問題を解決しました．
-                その結果，2024年度末に査読付き国際会議（ETRA 2025）に論文が採択されました．
-                また，国際的に活躍できるエンジニアを目指して語学力向上にも努めており，TOEICでは855点を取得しています．
-                さらに，専攻分野に限らず新しいテクノロジーへの興味も高く，常に学び続ける姿勢を持っています．
-            </p>
-        </section>
+            <section id="skills" class="content-section reveal">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-index">04 — SKILLS</p>
+                        <h2>技術スタック</h2>
+                    </div>
+                    <span class="heading-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
+                </div>
+                <div class="skill-grid">
+                    <article class="skill-card"><span class="skill-icon"><i class="fa-solid fa-c" aria-hidden="true"></i></span><div><h3>C++</h3><p>リアルタイム画像処理システム</p></div><span class="skill-level">CORE</span></article>
+                    <article class="skill-card"><span class="skill-icon"><i class="fa-brands fa-python" aria-hidden="true"></i></span><div><h3>Python</h3><p>研究補助・スクレイピング・Bot</p></div><span class="skill-level">DAILY</span></article>
+                    <article class="skill-card"><span class="skill-icon"><i class="fa-regular fa-image" aria-hidden="true"></i></span><div><h3>OpenCV</h3><p>視線推定・三次元幾何</p></div><span class="skill-level">CORE</span></article>
+                    <article class="skill-card"><span class="skill-icon"><i class="fa-brands fa-git-alt" aria-hidden="true"></i></span><div><h3>Git</h3><p>バージョン管理・GitHub Pages</p></div><span class="skill-level">DAILY</span></article>
+                    <article class="skill-card"><span class="skill-icon"><i class="fa-brands fa-linux" aria-hidden="true"></i></span><div><h3>Linux</h3><p>Ubuntu開発・サーバ構築</p></div><span class="skill-level">DAILY</span></article>
+                    <article class="skill-card language"><span class="skill-icon"><i class="fa-solid fa-language" aria-hidden="true"></i></span><div><h3>TOEIC</h3><p>2025.06 score</p></div><strong>855</strong></article>
+                </div>
+            </section>
 
-        <section id="links">
-            <h2><i class="fa-solid fa-link"></i> 外部リンク</h2>
-            <ul>
-                <li><a href="https://github.com/K0mork" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a></li>
-            </ul>
-        </section>
-    </main>
+            <section id="strength" class="strength-section reveal">
+                <div class="strength-number" aria-hidden="true">05</div>
+                <div class="strength-copy">
+                    <p class="section-index">05 — MY STRENGTH</p>
+                    <h2>仮説を立て、<br>粘り強く答えにたどり着く。</h2>
+                    <p>学部3年の夏から視線追跡の研究に平日は毎日取り組んでいます。幾何モデルが現実に即さない問題に直面した際も、独自の仮説を導入して解決し、ETRA 2025への論文採択につなげました。</p>
+                    <p>国際的に活躍できるエンジニアを目指して語学力向上にも取り組み、TOEIC 855点を取得。専攻にとらわれず、新しい技術を学び続けています。</p>
+                </div>
+                <div class="strength-quote" aria-hidden="true"><i class="fa-solid fa-quote-left"></i></div>
+            </section>
 
-    <footer>
-        <p>&copy; 2025 Kouki KOMORI</p>
-    </footer>
+            <footer>
+                <div><strong>Kouki KOMORI</strong><span>Research Portfolio</span></div>
+                <p>&copy; <span id="current-year">2026</span> Kouki KOMORI</p>
+                <a href="#top">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+            </footer>
+        </main>
+    </div>
 
-    <button id="back-to-top" class="back-to-top" aria-label="トップへ戻る">
-        <i class="fa-solid fa-arrow-up"></i>
+    <button id="back-to-top" class="back-to-top neu-icon-button" type="button" aria-label="ページの先頭へ戻る">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
     </button>
-
     <script src="script.js"></script>
 </body>
 </html>
